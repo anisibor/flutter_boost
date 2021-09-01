@@ -52,8 +52,7 @@ class PageVisibilityBinding {
     final observers =
         _listeners.putIfAbsent(route, () => <PageVisibilityObserver>{});
     observers.add(observer);
-    Logger.log(
-        'page_visibility, #addObserver, $observers, ${route.settings.name}');
+    Logger.log('page_visibility, #addObserver, $observers, ${route?.settings?.name}');
   }
 
   /// Unregisters the given observer.
